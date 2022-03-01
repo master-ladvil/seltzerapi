@@ -12,16 +12,18 @@ const presrouter = require("./routes/doctor")
 
 app.use("/doc" , presrouter)
 
-mongoose.connect(process.env.db,{
-    useNewUrlParser : true,
-    useUnifiedTopology : true},() => console.log("connected to db")
-)
 
-app.get('/', (req,res) => {
-    res.send("helo mf")
+app.get('/',(req,res) => {
+    res.send("hello mf")
 })
 
+const  connect  =  mongoose.connect(process.env.local, { useNewUrlParser: true , useUnifiedTopology: true })
+connect.then(db  =>  {
+    console.log("connected correctly to the server")})
 
 
-app.listen(5300)
-console.log("Seltzer active")
+PORT = process.env.port || 5300
+
+app.listen(PORT, () => {
+    console.log("Seltzer active")
+})
