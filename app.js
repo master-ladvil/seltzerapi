@@ -18,7 +18,7 @@ app.get('/',(req,res) => {
     res.send("hello mf")
 })
 
-const  connect  =  mongoose.connect(process.env.local, { useNewUrlParser: true , useUnifiedTopology: true })
+const  connect  =  mongoose.connect(process.env.db, { useNewUrlParser: true , useUnifiedTopology: true })
 connect.then(db  =>  {
     console.log("connected correctly to the server")})
 
