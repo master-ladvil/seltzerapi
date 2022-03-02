@@ -1,0 +1,21 @@
+{
+    "docname" : "bumblebeebumblebee",
+    "docId" : "03992",
+    "patientname" : "surya",
+    "patientId" : "499050",
+    "date" : "092827",
+    "drugs" : {
+        "drug1":{
+            "name" : "boobie",
+            "dose" : "jiglly wiggly",
+            "totalquantity" : "2",
+            "sched": {
+                "morn" : {"quantity" : "1"},
+                "lunch" : {"quantity": "nill"},
+                "evening" : {"quantity": "nill"},
+                "dinner" : {"quantity": "nill"}
+        }
+        }
+    }
+}
+

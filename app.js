@@ -8,10 +8,11 @@ app.use(bp.json())
 app.use(bp.urlencoded({useNewUrlParser : true}))
 
 const presrouter = require("./routes/doctor")
+const docregrouter = require("./routes/docreg")
 
 
 app.use("/doc" , presrouter)
-
+app.use("/reg/doc", docregrouter)
 
 app.get('/',(req,res) => {
     res.send("hello mf")
