@@ -23,8 +23,8 @@ connect.then(db  =>  {
     console.log("connected correctly to the server")})
 
 
-PORT = process.env.port || 5300
+app.set('port', process.env.PORT || 5300)
 
-app.listen(PORT, () => {
-    console.log("Seltzer active")
-})
+
+
+app.listen(app.get('port'), () => console.log('listening on port ' + app.get('port'))
