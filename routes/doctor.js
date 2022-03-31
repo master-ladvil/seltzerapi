@@ -1,6 +1,8 @@
 const express = require("express")
 const router = express.Router()
 
+const verifydoctor = require('./verifyDoc')
+
 const presmod = require("../modela/prescription")
 
 
@@ -9,7 +11,7 @@ router.get ('/pres', async (req,res)=> {
     res.json(getpres)
 })
 
-router.post("/pres", async (req,res) => {
+router.post("/pres",verifydoctor, async (req,res) => {
     const newpres = new presmod({
         docname : req.body.docname,
         docId: req.body.docId,
